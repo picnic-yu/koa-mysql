@@ -16,6 +16,6 @@ app.use(jwt({secret: secret.sign}).unless({path: [/^\/api\/login/, /^\/api\/crea
 
 app.use(router());
 
-app.listen(9527, () => {
-  console.log(`server running success....`)
+app.listen(9999, () => {
+  console.log(`server running success....9999`)
 })
