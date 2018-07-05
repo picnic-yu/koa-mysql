@@ -66,18 +66,15 @@ class UserController {
 				const newUser = await userModel.findUserByName(user.name)
 
 				// 签发token
-				const userToken = {
-					name: newUser.name,
-					id: newUser.id
-				}
-				const token = jwt.sign(userToken, secret.sign, {expiresIn: '1h'});
+				// const userToken = {
+				// 	name: newUser.name,
+				// 	id: newUser.id
+				// }
+				// const token = jwt.sign(userToken, secret.sign, {expiresIn: '1h'});
 
 				ctx.body = {
 					code: 1,
-					message: '创建成功',
-					bean: {
-						token
-					}
+					message: '创建成功'
 				}
 			}
 		} else {
