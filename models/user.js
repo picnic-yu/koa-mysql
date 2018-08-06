@@ -1,6 +1,6 @@
 const db = require('../config/db')
-const todoListDb = db.todoList
-const User = todoListDb.import('../schema/user.js')
+const sequelize = db.sequelize
+const User = sequelize.import('../schema/user.js')
 // 创建表
 // User.sync() 会创建表并且返回一个Promise对象
 // 如果 force = true 则会把存在的表（如果users表已存在）先销毁再创建表
