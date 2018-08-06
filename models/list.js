@@ -1,6 +1,6 @@
 const db = require('../config/db')
-const todoList = db.todoList
-const List = todoList.import('../schema/list')
+const sequelize = db.sequelize
+const List = sequelize.import('../schema/list')
 
 class ListModel {
   /**
